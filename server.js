@@ -118,7 +118,7 @@ app.get('/fruits/:id/edit', async (req, res) => {
   try {
     const foundFruit = await Fruit.findById(req.params.id)
     //passing in the foundFruit assigned to the specific id from the database
-    res.render('fruits/edit', {fruit: foundFruit})
+    res.render('fruits/Edit', {fruit: foundFruit})
   }catch (err) {
     res.status(400).send(err)
   }
